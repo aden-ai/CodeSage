@@ -1,2 +1,5 @@
-# Exclude the environment file containing sensitive data
+# Ignore environment variable files and Python cache directories                                                                                    
 .env
+__pycache__/
+.pytest_cache/
+venv/
