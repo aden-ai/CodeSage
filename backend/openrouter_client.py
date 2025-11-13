@@ -9,21 +9,21 @@ class OpenRouterClient:
     def __init__(self):
         self.api_key = os.getenv("OPENROUTER_API_KEY")
         self.model = os.getenv("OPENROUTER_MODEL", "deepseek/deepseek-chat-v3.1:free")
-        # --- FIX 1: Set self.base to the root domain ---
+        
         self.base = os.getenv("OPENROUTER_BASE", "https://openrouter.ai")
 
     def chat(self, code, lang):
-        # ... (prompt setup remains the same) ...
+        
 
         payload = {
-            # ... (payload setup remains the same) ...
+            
         }
 
         headers = {"Authorization": f"Bearer {self.api_key}"}
         
-        # --- FIX 2: Use the standard chat completions path ---
+       
         resp = httpx.post(
-            f"{self.base}/api/v1/chat/completions", # This is the correct, full URL now
+            f"{self.base}/api/v1/chat/completions", 
             json=payload, 
             headers=headers, 
             timeout=120
