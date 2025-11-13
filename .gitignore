@@ -1,0 +1,2 @@
+# Exclude the environment file containing sensitive data
+.env
